@@ -1,0 +1,1779 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+/* 
+
+共通パーツ
+
+*/
+
+body{
+    color: #000000!important;
+}
+
+/* header */
+.header-inner{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 72px;
+    padding: 6px 0 ;
+    background-color: #fff;
+    z-index: 3;
+}
+
+.logo{
+    margin: 7.3px 0 3.7px 29px;
+}
+
+.navigations{
+    display: flex;
+}
+
+.global-nav ul{
+    text-align: right;
+}
+
+.global-nav li{
+    display: inline-block;
+    padding-right: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.global-nav li:hover,.global-nav li.active{
+    color: #10993B;
+}
+
+.contact-btn{
+    width: 168px;
+    margin-right: 5px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #FFB000;
+    font-size: 14px;
+    line-height: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+
+  /* Toggle Button */
+  .nav-toggle {
+    display: none;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    width: 34px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 101;
+  }
+  .nav-toggle div {
+    position: relative;
+  }
+  .nav-toggle span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background: #262626;
+    border-radius: 2px;
+    left: 0;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+  }
+  .nav-toggle span:nth-child(1) {
+    top: 0;
+  }
+  .nav-toggle span:nth-child(2) {
+    top: 11px;
+  }
+  .nav-toggle span:nth-child(3) {
+    top: 22px;
+  }
+
+.fake{
+    height: 76px;
+    background-color: rgb(0, 0, 0,0.3);
+}
+
+/* landing */
+.landing{
+    position: relative;
+    width: 100%;
+    height: 335px;
+    background-image: url(img/top1.png);
+    background-position: center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.landing::before,.landing-second::before,.top-landing::before,.company-banner::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6,51,20,0.5);
+    z-index: -1;
+}
+
+h3.landing-message{
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 335px;
+  text-align: center;
+  z-index: 2;
+}
+
+/* landing-second */
+.landing-second{
+    position: relative;
+    width: 100%;
+    height: 277px;
+    background-image: url(img/landing-second.png);
+    background-position: center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.landing-second-inner{
+    width: 575px;
+    margin: 0  auto;
+    padding-top: 50px;
+    padding-bottom: 90px;
+    z-index: 2;
+}
+
+.landing-second-heading{
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.landing-second-heading .spbr{
+    display: none;
+}
+
+.btns{
+    display: flex;
+    width: 540px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.to-btn{
+    display: block;
+    width: 250px;
+    /* height: 64px; */
+    padding: 10px 0;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.to-btn.phone{
+    margin-right: 40px;
+    background-color: #10993B;
+}
+
+.to-btn.contact{
+    background-color: #FFB000;
+}
+
+.phone-desc{
+    font-size: 14px;
+}
+
+.phone-number{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.contact-desc{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+/* heading （見出し）*/
+.heading{
+   text-align: center;
+}
+
+.main-heading{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.sub-heading{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+/* footer-navigation */
+.footer-navigation-inner{
+    display: flex;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 80px 0 75px 0;
+}
+
+.footer-navigation-inner a:hover{
+    color: #10993B;
+}
+
+.footer-logo{
+    width: 254px;
+    height: 49px;
+}
+
+.footer-navs{
+    display: flex;
+    margin-left: auto;
+    width: 336px;
+    font-weight: bold;
+}
+
+.footer-nav-left{
+    margin-right: 70px;
+}
+
+.footer-nav-left a{
+    display: block;
+}
+
+.services-link{
+    margin-top: 30px;
+}
+
+.service-link{
+    font-size: 14px;
+}
+
+.service-link.link1{
+    margin-top: 18px;
+}
+
+.footer-nav-right li{
+    margin-bottom: 30px;
+}
+
+/* footer */
+.narrow-footer{
+    display: flex;
+    width: 100%;
+    height: 21px;
+    padding: 0 70px 0 56px;
+    background-color: #262626;
+}
+.narrow-footer p{
+    color: #fff;
+    font-size: 12px!important;
+    font-weight: bold;
+}
+.narrow-footer .to-other{
+    display: flex;
+}
+
+.narrow-footer .to-privacy{
+    margin-right: 30px;
+}
+.narrow-footer .copyright{
+    margin-left: auto;
+}
+
+/* 
+
+top.html(トップページ)
+
+*/
+/* landing */
+.top-landing{
+    position: relative;
+    width: 100%;
+    height: 628px;
+    background-image: url(img/top.jpg);
+    background-position: center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.top-head-desc{
+    width: 509px;
+    margin: 30px auto 25px auto;
+    color: #fff;
+}
+
+h3.top-heading{
+    padding-top: 183px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+}
+
+br.responsive{
+    display: none;
+}
+
+.top-to-contact{
+    display: flex;
+    width: 509px;
+    height: 60px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.top-desc{
+    width: 50%;
+    padding: 11px 0 11px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.top-to-contact-btn{
+    width: 50%;
+    margin: 3px 3px 3px 0px;
+    border-radius: 20px;
+    color: #fff;
+    background-color: #009C2A;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 54px;
+}
+
+.white-arrow{
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+/* top-solution */
+.top-solution{
+    position: relative;
+    height: 420px;
+    width: 100%;
+}
+
+.top-solution-inner{
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    width: 1040px;
+    /* height: 420px; */
+    margin: 0 auto;
+}
+
+.top-solution-block{
+    padding: 30px 21px;
+    border-radius: 35px;
+    background-color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+}
+
+h3.top-solution-heading{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+p.top-solution-desc{
+    margin-top: 15px;
+}
+
+.solution-blocks{
+    display: flex;
+    margin-top: 30px;
+}
+
+.multiple{
+    margin-left: 18px;
+}
+
+.fix-border{
+    width: 4px;
+    height: 309px;
+    margin: 0 29.5px;
+    background-color: rgba(0, 0, 0, 15%);
+}
+
+.to-solution-btn{
+    display: block;
+    height: 50px;
+    margin: 30px auto;
+    padding: 0px 20px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #009C2A;
+    line-height: 50px;
+    text-align: center;
+}
+
+.to-solution-btn.aicon{
+   width: 300px;
+}
+
+.to-solution-btn{
+   width: 320px;
+}
+
+/* top-service */
+.top-service{
+    width: 100%;
+    padding: 0 20px;
+}
+
+.top-service-inner{
+    padding: 0 70px;
+    margin: 0 auto;
+}
+
+.under-heading-desc{
+    margin: 30px 0 40px 0;
+}
+
+.service-blocks{
+    display: flex;
+    margin-bottom: 120px;
+}
+
+.consultant-block{
+   position: relative;
+   margin-right: 40px;
+}
+
+.solution-block{
+    position: relative;
+}
+
+.consultant-img{
+    /* width: 530px; */
+    height: 220px;
+    border-radius: 35px;
+    background-image: url(img/service-consultant.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.solution-img{
+    /* width: 530px; */
+    height: 220px;
+    border-radius: 35px;
+    background-image: url(img/service-solution.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.block-inner{
+    position: absolute;
+    left: 30px;
+    top: 120px;
+}
+
+.block-inner-heading{
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.white-arrow.lg{
+    margin-left: 24px;
+}
+
+.block-inner-desc{
+    color: #fff;
+}
+
+.blocks-desc{
+    padding: 20px 0;
+}
+
+.view-more{
+    display: block;
+    width: 102px;
+    margin-left: auto;
+    font-weight: bold;
+    
+}
+
+.view-more img{
+    margin-left: 10px;
+    margin-bottom: 2.8px;
+}
+
+/* company-banner */
+.company-banner{
+    position: relative;
+    width: 100%;
+    height: 392px;
+    padding-top: 60px;
+    color: #fff;
+    background-image: url(img/company-banner.jpg);
+    background-position: center center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.cb-desc{
+    margin: 40px 0;
+    text-align: center;
+}
+
+.blk-btns{
+    display: flex;
+    width: 668px;
+    margin: 0 auto;
+}
+
+
+.blk-btn{
+    display: block;
+    width: 324px;
+    height: 60px;
+    border-radius: 15px;
+    color: #fff;
+    background-color: #262626;
+    line-height: 60px;
+    text-align: center;
+}
+
+.blk-btn.cp{
+    margin-right: 20px;
+}
+
+.blk-btn img{
+    margin-left: 10px;
+    margin-bottom: 2.8px;
+}
+
+/* news */
+.news{
+    width: 100%;
+    margin-top: 122px;
+    margin-bottom: 160px;
+}
+
+.news time{
+    font-size: 14px;
+}
+
+.news-inner{
+    width: 100%;
+    padding: 0 90px;
+}
+
+.head-news{
+    display: flex;
+    align-items: center;
+}
+
+.head-news-thumbnail{
+    width: 530px;
+    height: 317px;
+    margin-right: 28px;
+    border-radius: 35px;
+}
+
+.head-news-thumbnail img{
+    border-radius: 35px;
+}
+
+.head-news-content{
+    width: 542px;
+}
+
+
+.head-news-title{
+    margin: 15px 0 25px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.head-news-datail{
+    margin-bottom: 15px;
+}
+
+.other-news{
+    display: flex;
+    margin-top: 40px;
+}
+
+.sm-news-thumbnail img{
+    border-radius: 35px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+}
+
+.sm-news{
+    width: 340px;
+}
+
+.sm-news.middle{
+    margin: 0 40px;
+}
+
+.sm-news-content{
+    padding: 20.6px 26px 0 26px;
+}
+
+.sm-news-title{
+    margin:  15px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.news .view-more{
+    font-size: 14px;
+}
+
+.blk-btn.ns{
+    margin: 51px auto 0 auto;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* 
+
+recruit.html（採用情報）
+
+*/
+/* mission */
+.mission{
+    margin: 80px 0 120px 0;
+}
+
+.mission-heading{
+    margin: 40px 0;
+    color: #10993B;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.mission-inner p{
+    text-align: center;
+}
+
+/* workplace */
+.workplace{
+    width: 100%;
+}
+
+.workplace-inner{
+    width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 35px;
+    background-image: url(img/workplace.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+
+.work-block{
+    width: 520px;
+    height: 100%;
+    padding: 40px;
+    border-radius: 35px;
+    background-color: #fff;
+}
+
+p.work-block-desc{
+    margin-bottom: 40px;
+}
+
+.workplace-inner h3{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* recruit */
+.recruit{
+    margin-top: 120px;
+    margin-bottom: 160px;
+}
+
+.recruit-inner{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.recruit-blocks{
+    display: flex;
+}
+
+.recruit-block{
+    width: 530px;
+    border-radius: 35px;
+}
+
+.recruit-block.lf{
+    margin-right: 42px;
+}
+
+.recruit-img{
+    height: 300px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.recruit-img.ri-1{
+    background-image: url(img/recruit1.jpg);
+}
+
+.recruit-img.ri-2{
+    background-image: url(img/recruit2.jpg);
+}
+
+.recruit-content{
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding: 25px 25px 33px 25px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+}
+
+.recruit-content p{
+    margin-bottom: 25px;
+}
+
+.blk-btn.recruit-btn{
+    margin: 0 auto;
+}
+
+/* 
+
+service.html(事業紹介ページ)
+
+*/
+/* breadcrumb（パンくず） */
+.breadcrumb-inner{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 70px;
+    font-size: 12px;
+}
+
+.breadcrumb-inner a{
+    padding-right: 10px;
+}
+
+.gr{
+    color: #10993B;
+    padding-right: 10px;
+}
+
+/* concept */
+.concept{
+    padding: 93px 20px 120px 20px;
+}
+
+.concept-inner{
+    display: flex;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.heading.left-align{
+    text-align: left;
+}
+
+.concept-detail{
+    width: 445px;
+    margin-right: 75px;
+}
+
+.concept-detail h3{
+    margin: 50px 0 30px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.concept-detail p{
+    font-size: 16px;
+}
+
+.concept-image{
+    width: 520px;
+    height: 322px;
+}
+
+
+/* cases */
+.cases{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.case-desc{
+    padding: 40px 0 77px 0;
+    text-align: center;
+}
+
+.case{
+    position: relative;
+    /* height: 411px; */
+    margin-bottom: 57px;
+    padding: 100px 50px 60px 50px;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 35px;
+}
+
+.case.case01{
+    background-image: url(img/case01.png);
+}
+
+.case.case02{
+    background-image: url(img/case02.png);
+}
+
+.case.case03{
+    background-image: url(img/case03.png);
+}
+
+.case-number{
+    position: absolute;
+    top: -37px;
+    left: 50%;
+    transform: translate(-50%,0%);
+    width: 74px;
+    height: 74px;
+    padding-top: 18px;
+    border-radius: 50%;
+    background-color: #10993B;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.0;
+}
+
+.case-inner{
+    display: flex;
+    align-items: center;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.case-issue{
+    width: 469px;
+    margin-right: 40px;
+}
+
+.issue-heading{
+    margin-bottom: 15.5px;
+    padding-bottom: 15.5px;
+    border-bottom: 1px #10993B solid ;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.issue-company{
+    margin-top: 30px;
+}
+
+.gr-img{
+    width: 23px;
+    height: 43px;
+    margin-right: 35px;
+}
+
+.case-solution{
+    width: 473px;
+    padding: 40px;
+    border-radius: 35px;
+    background-color: #fff;
+}
+
+.solution-heading{
+    color: #10993B;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.solution-desc{
+    margin-top: 30px;
+}
+
+/* voice */
+.voice{
+    margin-top: 63px;
+    margin-bottom: 160px;
+    padding: 0 20px;
+}
+
+.voice-inner{
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.voice-content{
+    display: flex;
+    margin-top: 40px;
+}
+
+.voice-desc{
+    order: 1;
+    width: 480px;
+    margin-right: 40px;
+    padding-top: 12px;
+}
+
+.companyname{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.voice-heading{
+    padding: 15px 0 40px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.voice-image{
+    order: 2;
+    width: 520px;
+    height: 340px;
+    /* background-image: url(img/voice-image.png);
+    background-position: center center;
+    background-size: cover; */
+}
+/* banner */
+.banner{
+    width: 100%;
+    height: 100px;
+    padding: 20px 0;
+    background-color: #262626;
+}
+.two-banners{
+    display: flex;
+    width: 434px;
+    margin: 0 auto;
+}
+.bn{
+    width: 207px;
+    height: 60px;
+    background-color: #fff;
+}
+.bn.bn-1{
+    margin-right: 20px;
+    padding: 9px 17px 10px 18px;
+}
+.bn.bn-2{
+    padding: 15px 17px 14px 18px;
+}
+
+
+/* 
+
+contact.html（お問い合わせページ）
+
+*/
+/* contact */
+.contact-content{
+    width: 100%;
+    height: 1397px;
+}
+
+.contact-inner{
+    margin: 72px auto;
+    text-align: center;
+    max-width: 600px;
+}
+
+.contact-inner p{
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.contact-inner input,.contact-inner textarea{
+    width: 100%;
+    margin-bottom: 25px;
+    border: 1px #253436 dotted;
+    border-radius: 10px;
+}
+
+.contact-inner input{
+    padding: 16px 0 16px 20px;
+}
+.contact-inner textarea{
+    height: 240px;
+    margin-bottom: 40px;
+    padding: 16px;
+}
+
+.contact-inner .blk-btn{
+    position: relative;
+    width: 324px;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: #000000;
+    color: #fff;
+    font-size: 16px;
+}
+
+.arrow-gr{
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+
+/* 
+
+privacy.html（プライバシーポリシーページ）
+
+*/
+.content{
+    width: 100%;
+}
+
+.entry-content{
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 80px 0 160px 0;
+}
+
+.entry-content .description{
+    margin: 0;
+}
+
+.entry-content h2{
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 60px;
+    padding-bottom: 25px;
+}
+
+.entry-content p{
+    margin: 0 50px;
+    font-size: 16px;
+}
+
+.entry-content ul{
+    margin: 0 50px;
+    padding-left: 30px;
+    list-style: outside;
+}
+
+.entry-content ol{
+    margin: 0 50px;
+    padding-left: 30px;
+}
+
+.entry-content ul li{
+    padding-left: 20px;
+}
+
+.entry-content ol li{
+    padding-left: 18px;
+}
+
+.entry-content .end-heading{
+    max-width: 300px;
+    margin: 0;
+    margin-left: auto;
+    font-weight: bold;
+    text-align: right;
+}
+
+@media screen and (max-width: 896px){
+/* 
+
+共通パーツ
+
+*/
+
+/* header */
+.header-inner{
+   height: 50px;
+   padding: 0px;
+}
+
+.fake{
+    height: 51px;
+}
+
+.logo{
+    margin: 0px;
+}
+
+.logo img{
+    width: 130px;
+    height: 25px;
+    margin: 12.3px 0 12.7px 15px;
+}
+
+.global-nav{
+    display: none;
+}
+
+.contact-btn{
+    display: none;
+}
+
+.nav-toggle {
+    display: block;
+    top: 13px;
+    right: 15px;
+    width: 30px;
+}
+
+.open .nav-toggle span:nth-child(1) {
+    top: 11px;
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    transform: rotate(315deg);
+}
+.open .nav-toggle span:nth-child(2) {
+    width: 0;
+    left: 50%;
+}
+.open .nav-toggle span:nth-child(3) {
+    top: 11px;
+    -webkit-transform: rotate(-315deg);
+    -moz-transform: rotate(-315deg);
+    transform: rotate(-315deg);
+}
+
+/* heading （見出し）*/
+ 
+ .main-heading{
+     font-size: 36px;
+ }
+ 
+ .sub-heading{
+     font-weight: bold;
+     font-size: 14px;
+ }
+ 
+
+/* 
+
+top.html(トップページ)
+
+*/
+/* landing */
+.top-landing{
+    height: 685px;
+    padding: 0 20px;
+}
+
+h3.top-heading{
+    padding-top: 200px;
+    font-size: 28px;
+}
+
+br.responsive{
+    display: block;
+}
+
+.top-head-desc{
+    width: 100%;
+    margin: 30px auto 30px auto;
+    font-size: 14px;
+    text-align: center;
+}
+
+.top-to-contact{
+    display: block;
+    width: 256px;
+    height: auto;
+    padding: 3px;
+}
+
+.top-desc{
+    width: 100%;
+    font-size: 12px;
+}
+
+.top-to-contact-btn{
+    display: block;
+    width: 100%;
+    margin: 0px;
+    font-size: 12px;
+}
+
+/* top-solution */
+.top-solution{
+    height: 1050px;
+    width: 100%;
+}
+
+.top-solution-inner{
+    top: -65px;
+    left: 0%;
+    transform: translate(0%, 0%);
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
+    width: 100%;
+    padding: 0 20px;
+}
+
+.top-solution-block{
+    width: 100%;
+    margin: 0 auto;
+    padding: 25px 18px 10px 18px;
+    border-radius: 35px;
+    background-color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.35);
+}
+
+h3.top-solution-heading{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.solution-blocks{
+    display: block;
+    margin-top: 30px;
+}
+.solution-images{
+  display: block;
+  width: 260px;
+  margin: 0 auto;
+}
+
+
+.aicon{
+    display: block;
+    width: 194px;
+    height: 47px;
+    margin: 0 auto;
+}
+
+.aicon.yubiqlo{
+    width: 190px;
+    height: 33px;
+}
+
+.multiple{
+    display: block;
+    margin-left: 0px;
+    margin-top: 15px;
+}
+
+.fix-border{
+    height: 4px;
+    width: 100%;
+    margin: 0 0 40px 0;
+}
+
+.to-solution-btn{
+    display: block;
+    height: 50px;
+    margin: 30px 0px;
+    padding: 0px 20px;
+}
+
+.to-solution-btn.aicon{
+   width: 100%;
+}
+
+.to-solution-btn{
+   width: 100%;
+}
+
+/* top-service */
+.top-service p{
+    font-size: 14px;
+}
+
+.top-service-inner{
+    padding: 0px;
+}
+
+.service-blocks{
+    display: block;
+}
+.consultant-block{
+    margin-right: 0px;
+    margin-bottom: 40px;
+ }
+
+ a.view-more{
+     font-size: 14px;
+ }
+ 
+ /* company-banner */
+ .company-banner{
+     height: 485px;
+ }
+
+ .company-banner p,.company-banner a{
+     font-size: 14px;
+ }
+
+ .blk-btns{
+     display: block;
+     width: 100%;
+     padding: 0 25px;
+ }
+
+.blk-btn{
+    width: 100%;
+}
+
+.blk-btn.cp{
+    margin-right: 0px;
+    margin-bottom: 25px;
+}
+
+/* news */
+.news-inner{
+    padding: 0 20px;
+}
+
+.head-news{
+    display: block;
+}
+
+.head-news-thumbnail{
+    width: 100%;
+    height: auto;
+    margin-right: 0px;
+}
+
+.head-news-title{
+    font-size: 18px;
+}
+
+.head-news-content{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.other-news{
+    display: block;
+}
+
+.sm-news-thumbnail{
+    width: 100%;
+    height: auto;
+}
+
+.sm-news-thumbnail img{
+    width: 100%;
+}
+
+.sm-news-title{
+    font-size: 18px;
+}
+
+.sm-news{
+    width: 100%;
+}
+
+.sm-news.middle{
+    margin: 0px;
+}
+
+.sm-news-content{
+    padding: 20px 0 40px 0;
+}
+
+.blk-btn.ns{
+    margin: 0 auto;
+}
+
+/* 
+
+recruit.html（採用情報）
+
+*/
+/* mission */
+.mission{
+    width: 100%;
+}
+
+.mission-inner{
+    padding: 20px;
+}
+
+.mission-inner p{
+    font-size: 14px;
+}
+
+.mission-heading{
+    font-size: 22px;
+}
+
+.sp-none{
+    display: none;
+}
+
+/* workplace */
+.workplace-inner{
+    width: 100%;
+}
+.work-block{
+    width: 100%;
+    padding: 30px 20px 20px 20px;
+}
+
+.workplace-inner h3{
+    font-size: 18px;
+}
+
+.work-block-desc{
+    font-size: 14px;
+}
+
+/* recruit */
+.recruit p{
+    font-size: 14px;
+}
+
+.recruit-inner{
+    width: 100%;
+    padding: 20px;
+}
+
+.recruit-blocks{
+    display: block;
+}
+
+.recruit-block{
+    width: 100%;
+}
+
+.recruit-img{
+    height: 190px;
+}
+
+.recruit-content{
+    padding: 25px 20px 20px 20px;
+}
+
+.recruit-block.lf{
+    margin-right: 0px;
+    margin-bottom: 40px;
+}
+
+ /* 
+
+privacy.html（プライバシーポリシーページ）
+
+*/
+    .entry-content{
+        margin: 0 10px;
+    }
+
+/* 
+
+service.html(サービスページ)
+
+*/
+/* パンくずリスト */
+.breadcrumb{
+    display: none;
+}
+
+/* concept */
+.concept{
+    padding: 45px 20px 120px 20px;
+}
+
+.concept-inner{
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.concept-detail{
+    width: 100%;
+    margin-right: 0;
+}
+
+.concept-detail h3{
+    margin: 50px 0 30px 0;
+    font-size: 18px;
+}
+
+.concept-detail p{
+    font-size: 14px;
+}
+
+.concept-image{
+    width: 100%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+
+/* cases */
+.cases{
+    width: 100%;
+    padding: 0 20px;
+}
+
+.case-desc{
+    padding: 40px 0 77px 0;
+    text-align: center;
+}
+
+.case{
+    position: relative;
+    margin-bottom: 67px;
+    padding: 62px 20px 20px 20px;
+
+}
+
+.case-inner{
+    display: block;
+    width: 100%;
+}
+
+.case-issue{
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 25px;
+}
+
+.issue-heading{
+    margin-bottom: 15.5px;
+    padding-bottom: 15.5px;
+    border-bottom: 1px #10993B solid ;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.issue-desc{
+    font-size: 14px;
+}
+
+.issue-company{
+    margin-top: 16px;
+    font-size: 12px;
+}
+
+.gr-img{
+    display: block;
+    transform: rotate(90deg);
+    margin: 0 auto;
+}
+
+.case-solution{
+    width: 100%;
+    padding: 30px 20px;
+    margin-top: 25px;
+}
+
+.solution-heading{
+    font-size: 14px;
+}
+
+.solution-desc{
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+/* voice */
+.voice{
+    margin-top: 120px;
+    padding: 0 20px;
+}
+
+.voice-inner{
+    width: 100%;
+}
+
+.voice-content{
+    display: block;
+    margin-top: 40px;
+}
+
+.voice-desc{
+    width: 100%;
+    margin-right: 0px;
+    padding-top: 20px;
+}
+
+.companyname{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.voice-heading{
+    padding: 15px 0 40px 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.voice-image{
+    width: 100%;
+    height: auto;
+}
+
+/* banner */
+.banner{
+    height: 93px;
+    padding: 25px 0;
+}
+.two-banners{
+    display: flex;
+    width: 315px;
+    margin: 0 auto;
+}
+.bn{
+    width: 147px;
+    height: 43px;
+    background-color: #fff;
+}
+.bn.bn-1{
+    margin-right: 20px;
+    padding: 7px 16.5px 7px 13px;
+}
+.bn.bn-2{
+    padding: 11px 14px 11px 13.5px;
+}
+
+/* footer-navigation */
+.footer-navigation-inner{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 20px 75px 20px;
+}
+
+.footer-logo{
+    width: 130px;
+    height: 25px;
+}
+
+.footer-navs{
+    display: block;
+    width: auto;
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-nav-left{
+    margin-right: 0px;
+}
+
+.services-link{
+    margin-top: 25px;
+}
+
+.service-link{
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.service-link.link1{
+    margin-top: 18px;
+}
+
+.footer-nav-right{
+    margin-top: 25px;
+}
+
+.footer-nav-right li{
+    margin-bottom: 25px;
+}
+
+
+}
+
+@media screen and (max-width: 640px){
+/* 
+
+共通パーツ
+
+*/
+
+/* landing */
+h3.landing-message{
+    font-size: 22px;
+}
+
+/* footer */
+.narrow-footer{
+    display: block;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 52px;
+    padding:10px 0px 6px 0px;
+    }
+    .narrow-footer .to-other{
+    width: 200px;
+    margin: 0 auto;
+    }
+    .narrow-footer p{
+        font-size: 10px!important;
+    }
+    .narrow-footer .copyright{
+        margin-top: 10px;
+    }
+
+/* 
+
+contact.html（お問い合わせページ）
+
+*/
+
+    /* contact */
+    .contact-inner{
+        max-width: 326px;
+    }
+
+ /* 
+
+privacy.html（プライバシーポリシーページ）
+
+*/
+    .entry-content p,.entry-content ul,.entry-content ol{
+        margin: 0 20px;
+    }
+
+/* landing-second */
+.landing-second{
+    height: auto;
+    background-image: url(img/sp-landing-second.png);
+}
+
+.landing-second-inner{
+    width: 100%;
+    margin: 0 auto;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.landing-second-heading .spbr{
+    display: block;
+}
+
+.btns{
+    display: block;
+    width: auto;
+}
+.to-btn{
+    margin: 0 auto;
+}
+.to-btn.phone{
+    margin-right: auto;
+}
+.to-btn.contact{
+    margin-top: 25px;
+}
+
+}
